@@ -23,6 +23,9 @@ public class BalancedBrackets {
      */
     public static boolean hasBalancedBrackets(String str) {
         int brackets = 0;
+        if (!str.contains("[")&& !str.contains("]")) {
+            return false;
+        }
         for (char ch : str.toCharArray()) {
             if (ch == '[') {
                 brackets++;
